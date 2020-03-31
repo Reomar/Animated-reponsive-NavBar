@@ -175,7 +175,7 @@ main {
 @media only screen and (max-width : 600px){
     .navBar{
         bottom: 0;
-        height: 4rem;
+        height: 4em;
         width: 100vw;
     }   
 
@@ -183,10 +183,14 @@ main {
         display: none;
     }
 
+    main{
+        padding: 3em;
+    }
+
     .navbar-nav{
         flex-direction: row;
         width: 100vw;
-        height: 4rem;
+        height: 4em;
     }
 
     .nav-link{
@@ -199,7 +203,9 @@ main {
         justify-content: center;
     }
     
-    
+    .nav-link svg {
+        filter: drop-shadow(0 0 0);
+    }
     
     
 }
