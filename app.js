@@ -40,12 +40,12 @@ console.log(theme)
 button.onclick = ()=>{
     if(body.classList == "light"){
          body.classList.replace("light","dark");
-        // localStorage.setItem("theme", "dark");
+        localStorage.setItem("theme", "dark");
         text.innerHTML = "Light it up!"
 
     }else{
         body.classList.replace("dark","light");
-       // localStorage.setItem("theme", "light")
+       localStorage.setItem("theme", "light")
        text.innerHTML = "Let it Night!"
     }
 }
