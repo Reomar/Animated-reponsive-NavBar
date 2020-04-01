@@ -1,19 +1,42 @@
 :root{
     font-size: 16px;
     font-family: 'Baloo Thambi 2', cursive;
-    --text-primary: #6b6b6b;
-    --text-secondary: #ececec;
-    --bg-primary: #23232e;
-    --bg-secondary: #141418;
+
+    --gray: #6b6b6b;
+    --white: #ececec;
+    --gray1: #23232e;
+    --gray2: #141418;
+    --black: #000000;
+    --blue: #2186a5;
     --transition-speed: 600ms;
 }
 
 
+.light{
+    --text-primary: var(--black);
+    --text-secondary: var(--white);
+    --bg:var(--white);
+    --bg-primary: var(--gray1);
+    --bg-secondary: var(--gray2);
+    --moon-color: var(--blue)
+}
+
+.dark{
+    --text-primary: var(--white);
+    --text-secondary: var(--white);
+    --bg:var(--black);
+    --bg-primary: var(--gray1);
+    --bg-secondary: var(--gray2);
+    --moon-color: var(--white)
+}
+
+
 body {
-    color:black;
-    background-color: white;
+    color: var(--text-primary);
+    background-color: var(--bg);
     margin: 0;
     padding: 0;
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 body::-webkit-scrollbar{
@@ -55,7 +78,7 @@ main {
     display: flex;
     align-items: center;
     height: 5rem;
-    color: var(--text-primary);
+    color: var(--text-secondary);
     text-decoration: none;
     filter: grayscale(100%);
     transition: var(--transition-speed);
@@ -92,7 +115,7 @@ main {
 }
 
 .fa-moon{
-    color: #2186a5;
+    color: var(--moon-color);
 }
 
 .fa-primary ,.fa-secondary ,.fa-moon{
